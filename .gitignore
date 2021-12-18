@@ -348,3 +348,11 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Intelli J Files
+.idea/
+*.iml
+
+### Java ###
+# Compiled class file
+*.class
