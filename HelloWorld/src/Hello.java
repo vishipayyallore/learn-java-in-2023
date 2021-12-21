@@ -12,5 +12,10 @@ public class Hello {
         System.out.println("Hello World Second Time !!");
 
         System.out.println(MessageFormat.format("{0} + {1} = {2}", value1, value2, sum));
+
+        int intMinValue = Integer.MIN_VALUE;
+        int intMaxValue = Integer.MAX_VALUE;
+        System.out.println(MessageFormat.format("Int Min Value:{0} :: Int Max Value{1}", intMinValue, intMaxValue));
+
     }
 }
