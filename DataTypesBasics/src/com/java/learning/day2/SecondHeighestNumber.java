@@ -1,11 +1,11 @@
 import java.io.*;
 import java.util.Arrays;
-// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
 
 class SecondHeighestNumber {
     public static void main(String[] args) {
-        int[] arr = { 13, 7, 6, 102, 21, 9, 101, 102 };
+        // int[] arr = { 13, 7, 6, 102, 21, 9, 101, 102 };
+        int[] arr = { 102, 102, 102, 102, 102, 102, 102, 102 };
+        boolean found = false;
         
         System.out.println(Arrays.toString(arr));
   
@@ -22,7 +22,12 @@ class SecondHeighestNumber {
             }
             
             System.out.println(arr[i]);
+            found = true;
             break;
+        }
+        
+        if(!found){
+            System.out.println("All elements in the array are same");
         }
     }
 }
