@@ -1,5 +1,10 @@
 package com.echannel.propertymanagement.dtos;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class PropertyDto {
 
     private Long id;
@@ -9,6 +14,7 @@ public class PropertyDto {
     private String address;
     private Long userId;
 
+    /*
     public Long getId() {
         return id;
     }
@@ -55,5 +61,6 @@ public class PropertyDto {
 
     public void setUserId(Long userId) {
         this.userId = userId;
-    }
+    } */
+
 }
