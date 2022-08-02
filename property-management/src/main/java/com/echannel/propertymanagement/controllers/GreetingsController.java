@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/greetings")
 public class GreetingsController {
 
-    //http://localhost:8080/api/v1/Greetings/greet
+    //http://localhost:8080/api/v1/greetings/greet
     @GetMapping("/greet")
-    public String sayHello(){
+    public String sayHello() {
         return "Hello Spring Boot!";
     }
 
