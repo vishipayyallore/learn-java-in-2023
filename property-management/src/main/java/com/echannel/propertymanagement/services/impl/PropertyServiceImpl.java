@@ -1,5 +1,6 @@
 package com.echannel.propertymanagement.services.impl;
 
+import com.echannel.propertymanagement.converters.PropertyConverter;
 import com.echannel.propertymanagement.dtos.PropertyDto;
 import com.echannel.propertymanagement.entities.PropertyEntity;
 import com.echannel.propertymanagement.repositories.PropertyRepository;
@@ -13,15 +14,13 @@ public class PropertyServiceImpl implements PropertyService {
     @Autowired
     private PropertyRepository propertyRepository;
 
+    @Autowired
+    private PropertyConverter propertyConverter;
+
     @Override
     public PropertyDto saveProperty(PropertyDto propertyDto) {
 
-        PropertyEntity pe = new PropertyEntity();
-
-        pe.setTitle(propertyDto.getTitle());
-        pe.setAddress(propertyDto.getAddress());
-        pe.setDescription(propertyDto.getDescription());
-        pe.setPrice(propertyDto.getPrice());
+        PropertyEntity pe = propertyConverter.convertDTOtoEntity(propertyDto);
 
         pe = propertyRepository.save(pe);
         propertyDto.setId(pe.getId());
