@@ -10,5 +10,5 @@ public interface PropertyRepository extends CrudRepository<PropertyEntity, Long>
 
     //@Query("SELECT p FROM PropertyEntity p WHERE p.userEntity.id = :userId AND p.title = :title")
     //List<PropertyEntity> findAllByUserEntityId(@Param("userId") Long userId, @Param("title") Long title);
-    List<PropertyEntity> findAllByUserEntityId(@Param("userId") Long userId);
+    // List<PropertyEntity> findAllByUserEntityId(@Param("userId") Long userId);
 }

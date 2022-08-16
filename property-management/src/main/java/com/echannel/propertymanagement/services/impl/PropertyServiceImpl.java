@@ -1,15 +1,31 @@
 package com.echannel.propertymanagement.services.impl;
 
 import com.echannel.propertymanagement.dtos.PropertyDto;
+import com.echannel.propertymanagement.entities.PropertyEntity;
+import com.echannel.propertymanagement.repositories.PropertyRepository;
 import com.echannel.propertymanagement.services.PropertyService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class PropertyServiceImpl implements PropertyService {
 
+    @Autowired
+    private PropertyRepository propertyRepository;
+
     @Override
     public PropertyDto saveProperty(PropertyDto propertyDto) {
 
+        PropertyEntity pe = new PropertyEntity();
+
+        pe.setTitle(propertyDto.getTitle());
+        pe.setAddress(propertyDto.getAddress());
+        pe.setDescription(propertyDto.getDescription());
+        pe.setPrice(propertyDto.getPrice());
+
+        pe = propertyRepository.save(pe);
+        propertyDto.setId(pe.getId());
+        
         /*
         Optional<UserEntity> optUe = userRepository.findById(propertyDTO.getUserId());
         if(optUe.isPresent()) {
@@ -28,6 +44,7 @@ public class PropertyServiceImpl implements PropertyService {
             throw new BusinessException(errorModelList);
         }
         */
+
 
         return propertyDto;
     }
