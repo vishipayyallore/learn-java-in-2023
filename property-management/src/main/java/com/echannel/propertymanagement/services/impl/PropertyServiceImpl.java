@@ -25,7 +25,7 @@ public class PropertyServiceImpl implements PropertyService {
 
         pe = propertyRepository.save(pe);
         propertyDto.setId(pe.getId());
-        
+
         /*
         Optional<UserEntity> optUe = userRepository.findById(propertyDTO.getUserId());
         if(optUe.isPresent()) {
