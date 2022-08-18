@@ -8,6 +8,9 @@ import com.echannel.propertymanagement.services.PropertyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class PropertyServiceImpl implements PropertyService {
 
@@ -44,8 +47,20 @@ public class PropertyServiceImpl implements PropertyService {
         }
         */
 
-
         return propertyDto;
+    }
+
+    @Override
+    public List<PropertyDto> getAllProperties() {
+        List<PropertyEntity> listOfProps = (List<PropertyEntity>) propertyRepository.findAll();
+        List<PropertyDto> propList = new ArrayList<>();
+
+        for (PropertyEntity pe : listOfProps) {
+            PropertyDto dto = propertyConverter.convertEntityToDTO(pe);
+            propList.add(dto);
+        }
+
+        return propList;
     }
 
 }
