@@ -5,10 +5,25 @@ public class Main {
 
         printItemsV1(10);
 
+        printItemsV2(10);
+
         System.out.println("Hello world!");
     }
 
-    // O(n). - Drop Constants - O(n) == O(n)
+    // O(n^2 + n) - Drop Non-Dominants - O(n^2)
+    public static void printItemsV2(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) { // n * n === O(n^2)
+                System.out.println(i + " " + j);
+            }
+        }
+
+        for (int k = 0; k < n; k++) { // O(n)
+            System.out.println(k);
+        }
+    }
+
+    // O(n). - Drop Constants - O(2n) == O(n)
     public static void printItems(int n) {
         for (int i = 0; i < n; i++) {
             System.out.println(i);
@@ -19,7 +34,7 @@ public class Main {
         }
     }
 
-    // O(n). - O(n^2) 
+    // O(n). - O(n^2)
     public static void printItemsV1(int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) { // n * n === O(n^2)
