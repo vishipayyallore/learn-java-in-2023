@@ -7,7 +7,16 @@ public class Main {
 
         printItemsV2(10);
 
+        System.out.println(addItems(100));
+
         System.out.println("Hello world!");
+    }
+
+    // O(log n) ==== 2^3 = 8 === log 2 (8) = 3
+
+    // O(1) - Constant Time
+    public static int addItems(int n) {
+        return n + n + n;
     }
 
     // O(n^2 + n) - Drop Non-Dominants - O(n^2)
@@ -41,6 +50,23 @@ public class Main {
                 for (int k = 0; k < n; k++) { // n * n * n === O(n^3) === O(n^2)
                     System.out.println(i + " " + j + " " + k);
                 }
+            }
+        }
+    }
+
+    // O(n + m) - O(n * m)
+    public static void printItemsV3(int n, int m) {
+        for (int i = 0; i < n; i++) { // O(n)
+            System.out.println(i);
+        }
+
+        for (int j = 0; j < m; j++) { // O(m)
+            System.out.println(j);
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) { // n * m === O(n * m)
+                System.out.println(i + " " + j);
             }
         }
     }
