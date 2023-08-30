@@ -12,5 +12,9 @@ public class IntDemos {
         age = 18 + 1;
         name = "John";
         System.out.println(String.format("%s is %d years old.", name, age));
+
+        age = (10 + 5) + (2 * 10);
+        name = "Sarah";
+        System.out.println(String.format("%s is %d years old.", name, age));
     }
 }
