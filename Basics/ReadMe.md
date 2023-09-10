@@ -2,6 +2,10 @@
 
 Learning Java basics
 
+## Useful Links
+
+> 1. [https://www.javatpoint.com/java-variables](https://www.javatpoint.com/java-variables)
+
 ## Few things to remember in Java Programming Basics
 
 > 1. keywords are case sensitive. keywords are all lowercase. keywords are reserved words that cannot be used as identifiers (variable names, function names, and loop labels).

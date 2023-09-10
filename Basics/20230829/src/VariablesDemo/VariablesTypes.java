@@ -1,3 +1,7 @@
+/*
+ * There are three types of variables in java: local, instance and static.
+ * There are two types of data types in Java: primitive and non-primitive.
+ */
 package VariablesDemo;
 
 public class VariablesTypes {
