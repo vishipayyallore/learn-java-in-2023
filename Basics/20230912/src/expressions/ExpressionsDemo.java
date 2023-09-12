@@ -7,6 +7,6 @@ public class ExpressionsDemo {
             int a = 10;
             int b = 20;
     
-            System.out.println("Sum of " + a + " and " + b + " is " + sum);
+            System.out.println("Sum of " + a + " and " + b + " is " );
         }
 }
